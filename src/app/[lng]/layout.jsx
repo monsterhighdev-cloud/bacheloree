@@ -1,5 +1,5 @@
-import Footer from "@/components/Footer/Footer";
-import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/app/components/Footer/Footer";
+import Navbar from "@/app/components/Navbar/Navbar";
 import { dir } from "i18next";
 import { Inter } from "next/font/google";
 import { languages } from "../il8n/settings";

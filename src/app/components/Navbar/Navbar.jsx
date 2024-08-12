@@ -20,7 +20,7 @@ const Navbar = async ({ lng }) => {
               <Link href={`/${lng}/auth/login`}>{t("login")}</Link>
             </li>
             <li>
-              <Link href={`/${lng}/auth/login`}>{t("register")}</Link>
+              <Link href={`/${lng}/auth/register`}>{t("register")}</Link>
             </li>
           </ul>
         </nav>
