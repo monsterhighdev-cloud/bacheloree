@@ -16,12 +16,12 @@
   }
 } */
 
-body {
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+/* Utility */
+.container {
+  @apply max-w-[1200px] w-full mx-auto px-2;
+}
+
+/* Navbar */
+nav ul {
+  @apply flex gap-4;
 }
