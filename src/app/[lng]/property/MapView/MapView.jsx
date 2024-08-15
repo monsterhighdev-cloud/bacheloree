@@ -34,6 +34,7 @@ const MapView = ({ coordinates, listingData }) => {
       />
       {listingData.map((data, index) => (
         <Marker
+          key={index}
           position={{ lat: data.lat, lon: data.lon }}
           icon={L.icon(iconDesign)}
         >

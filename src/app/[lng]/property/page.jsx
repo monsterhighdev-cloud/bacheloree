@@ -3,7 +3,7 @@
 import { useState } from "react";
 import MapMode from "./MapView/MapMode";
 
-const page = ({ params: { lng } }) => {
+const Property = ({ params: { lng } }) => {
   const [viewMode, setViewModel] = useState("map");
 
   const [listingData, setListingData] = useState([
@@ -29,4 +29,4 @@ const page = ({ params: { lng } }) => {
     </div>
   );
 };
-export default page;
+export default Property;

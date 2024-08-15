@@ -1,4 +1,5 @@
 import _ from "lodash";
+import Image from "next/image";
 import { useRef, useState } from "react";
 import { GoPlusCircle } from "react-icons/go";
 import { IoCloseCircleOutline } from "react-icons/io5";
@@ -67,7 +68,7 @@ const NewListingFormImageUpload = ({ productFile, setProductFile, t }) => {
         {productPreview.map((preview) => (
           <div key={preview.index} className="relative">
             <div className="w-40 h-40 rounded-box">
-              <img
+              <Image
                 src={preview.preview}
                 className="rounded-box bg-base-100 object-contain"
                 alt="product photo"
