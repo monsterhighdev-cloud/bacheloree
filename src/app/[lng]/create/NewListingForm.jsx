@@ -1,6 +1,7 @@
 import Input from "@/app/components/UI/Input";
 import Select from "@/app/components/UI/Select";
 import { useEffect, useState } from "react";
+import NewListingFormImageUpload from "./NewListingFormImageUpload";
 
 const NewListingForm = ({ query, setQuery }) => {
   const [formData, setFormDate] = useState({
@@ -9,6 +10,7 @@ const NewListingForm = ({ query, setQuery }) => {
     area: "",
     location: "",
   });
+  const [productFile, setProductFile] = useState([]);
 
   const handleChange = (e) => {
     setFormDate((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -33,6 +35,16 @@ const NewListingForm = ({ query, setQuery }) => {
         <h1>List a new room</h1>
       </div>
       <form action="" className="space-y-4 mt-8 bg-base-200 p-4 rounded-box">
+        <div className="row">
+          <NewListingFormImageUpload
+            productFile={productFile}
+            setProductFile={setProductFile}
+          />
+        </div>
+        <div className="row">
+          <Input label="Title" placeholder="Enter Your Listing Title" />
+          <Input label="Date" type="date" />
+        </div>
         <div className="row">
           <Input label="Title" placeholder="Enter Your Listing Title" />
           <Input label="Date" type="date" />

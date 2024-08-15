@@ -11,10 +11,14 @@ h1 {
   @apply text-3xl font-bold;
 }
 
+img {
+  @apply object-cover w-full h-full;
+}
+
 .container {
   @apply max-w-[1200px] w-full mx-auto px-2;
 }
 
 .row {
-  @apply flex flex-col lg:flex-row gap-4;
+  @apply flex flex-col lg:flex-row gap-4 w-full;
 }
