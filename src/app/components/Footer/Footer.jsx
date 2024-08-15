@@ -7,7 +7,7 @@ const Footer = async ({ lng }) => {
   const { t: footer } = await useTranslation(lng, "footer");
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-base-200">
       <footer className="container footer text-base-content p-10">
         <nav>
           <h6 className="footer-title">{footer("services")}</h6>

@@ -8,7 +8,7 @@ const Navbar = async ({ lng }) => {
   const { t } = await useTranslation(lng, "nav");
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-base-200">
       <div className="container navbar">
         <div className="navbar-start gap-2 lg:gap-0">
           {/* Mobile Drop down */}
@@ -26,7 +26,7 @@ const Navbar = async ({ lng }) => {
               <Link href={`/${lng}/create`}>{t("Create")}</Link>
             </li>
             <li>
-              <LanguageSwitcher lng={lng} bg="bg-gray-50" />
+              <LanguageSwitcher lng={lng} bg="bg-base-200" />
             </li>
           </ul>
         </div>
