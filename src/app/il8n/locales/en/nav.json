@@ -1,5 +1,7 @@
 {
   "home": "Home",
   "login": "Login",
-  "register": "Register"
+  "register": "Register",
+  "get_started": "Get Started",
+  "language_switcher": "Language Switcher"
 }
