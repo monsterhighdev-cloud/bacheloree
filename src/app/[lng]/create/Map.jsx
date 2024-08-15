@@ -50,7 +50,7 @@ const Map = ({ coordinates }) => {
       zoom={13}
       scrollWheelZoom={true}
       style={{ height: "100%", width: "100%" }}
-      className="container"
+      className="container z-0"
       ref={mapRef}
     >
       <TileLayer

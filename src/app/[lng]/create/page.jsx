@@ -27,13 +27,13 @@ const CreateNewListing = () => {
   }, [query]);
 
   return (
-    <div className="flex">
+    <div className="flex flex-col lg:flex-row">
       {/* Left Side Form */}
       <div className="w-full">
         <NewListingForm query={query} setQuery={setQuery} />
       </div>
       {/* Right Side Map */}
-      <div className="w-full h-[750px]">
+      <div className="w-full h-[400px] lg:h-[750px]">
         <Map coordinates={coordinates} />
       </div>
     </div>

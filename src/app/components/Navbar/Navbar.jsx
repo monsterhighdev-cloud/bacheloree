@@ -18,7 +18,7 @@ const Navbar = async ({ lng }) => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 z-50">
             <li>
               <Link href={`/${lng}`}>{t("home")}</Link>
             </li>
