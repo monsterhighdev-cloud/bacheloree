@@ -1,7 +1,5 @@
-"use client";
-
 import "leaflet/dist/leaflet.css";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   MapContainer,
   Marker,
@@ -37,13 +35,23 @@ const LocationMarker = () => {
   );
 };
 
-const Map = () => {
+const Map = ({ coordinates }) => {
+  const mapRef = useRef(null);
+
+  useEffect(() => {
+    if (mapRef.current) {
+      mapRef.current.flyTo(coordinates, 16, mapRef.current.getZoom());
+    }
+  }, [coordinates]);
+
   return (
     <MapContainer
-      center={[23.88519, 90.390083]}
-      zoom={16}
+      center={coordinates}
+      zoom={13}
       scrollWheelZoom={true}
       style={{ height: "100%", width: "100%" }}
+      className="container"
+      ref={mapRef}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
