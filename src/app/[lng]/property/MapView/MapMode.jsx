@@ -1,7 +1,11 @@
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { CiMenuKebab } from "react-icons/ci";
 import MapFilters from "./MapFilters";
-import MapView from "./MapView";
+
+const MapView = dynamic(() => import("./MapView"), {
+  ssr: false,
+});
 
 const MapMode = ({ lng, listingData }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);

@@ -1,7 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
-import Map from "./Map";
+// import Map from "./Map";
+import dynamic from "next/dynamic";
 import NewListingForm from "./NewListingForm";
+
+const Map = dynamic(() => import("./Map"), {
+  ssr: false,
+});
 
 const CreateNewListing = ({ params: { lng } }) => {
   const [query, setQuery] = useState("");
