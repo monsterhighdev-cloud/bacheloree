@@ -23,6 +23,9 @@ const Navbar = async ({ lng }) => {
               <Link href={`/${lng}`}>{t("home")}</Link>
             </li>
             <li>
+              <Link href={`/${lng}/create`}>{t("Create")}</Link>
+            </li>
+            <li>
               <LanguageSwitcher lng={lng} bg="bg-gray-50" />
             </li>
           </ul>
