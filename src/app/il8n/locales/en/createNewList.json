@@ -1,0 +1,14 @@
+{
+  "heading": "List a new room",
+  "title": "Title",
+  "title_placeholder": "Enter Your Listing Title",
+  "date": "Date",
+  "gender_label": "Select Gender",
+  "country_label": "Select Country",
+  "city_label": "Select City",
+  "area_label": "Select Area",
+  "location_label": "Select Location",
+  "max_added": "Max images added",
+  "upload_msg": "Drag & drop your images here or click to upload",
+  "upload_count": "images added. Click to add more."
+}

@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { GoPlusCircle } from "react-icons/go";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
-const NewListingFormImageUpload = ({ productFile, setProductFile }) => {
+const NewListingFormImageUpload = ({ productFile, setProductFile, t }) => {
   const [productPreview, setProductPreview] = useState([]);
 
   const ref = useRef();
@@ -101,10 +101,10 @@ const NewListingFormImageUpload = ({ productFile, setProductFile }) => {
             <GoPlusCircle className="text-2xl" />
             <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
               {productPreview.length === 4
-                ? "Max images added"
+                ? t("max_added")
                 : productPreview.length
-                ? `${productPreview.length} images added. Click to add more.`
-                : "Drag & drop your images here or click to upload"}
+                ? `${productPreview.length} ${t("upload_count")}`
+                : t("upload_msg")}
             </p>
           </div>
         </div>

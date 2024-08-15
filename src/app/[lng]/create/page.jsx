@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Map from "./Map";
 import NewListingForm from "./NewListingForm";
 
-const CreateNewListing = () => {
+const CreateNewListing = ({ params: { lng } }) => {
   const [query, setQuery] = useState("");
   const [coordinates, setCoordinates] = useState({
     lat: 23.8693275,
@@ -30,11 +30,11 @@ const CreateNewListing = () => {
     <div className="flex flex-col lg:flex-row">
       {/* Left Side Form */}
       <div className="w-full">
-        <NewListingForm query={query} setQuery={setQuery} />
+        <NewListingForm lng={lng} query={query} setQuery={setQuery} />
       </div>
       {/* Right Side Map */}
       <div className="w-full h-[400px] lg:h-[750px]">
-        <Map coordinates={coordinates} />
+        <Map lng={lng} coordinates={coordinates} />
       </div>
     </div>
   );
