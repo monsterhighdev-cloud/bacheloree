@@ -33,7 +33,7 @@ const CreateNewListing = ({ params: { lng } }) => {
         <NewListingForm lng={lng} query={query} setQuery={setQuery} />
       </div>
       {/* Right Side Map */}
-      <div className="w-full h-[400px] lg:h-[750px]">
+      <div className="w-full h-[400px] lg:h-[800px]">
         <Map lng={lng} coordinates={coordinates} />
       </div>
     </div>
