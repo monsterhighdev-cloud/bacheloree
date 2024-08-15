@@ -7,9 +7,12 @@ export const dbConnect = async () => {
     return;
   }
 
-  await mongoose.connect(process.env.MONGODB_URL);
-  // console.log("DB Connected");
-
+  try {
+    await mongoose.connect(process.env.MONGODB_URL);
+    // console.log("DB Connected");
+  } catch (err) {
+    console.log(err);
+  }
   dbConnected.connection = true;
 };
 
