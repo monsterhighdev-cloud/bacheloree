@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const MapFilters = ({ lng, query, setQuery, sidebarOpen, setSidebarOpen }) => {
   const { t } = useTranslation(lng, "createNewList");
 
-  const [formData, setFormDate] = useState({
+  const [formData, setFormData] = useState({
     country: "bangladesh",
     city: "dhaka",
     area: "",
@@ -13,7 +13,7 @@ const MapFilters = ({ lng, query, setQuery, sidebarOpen, setSidebarOpen }) => {
   });
 
   const handleChange = (e) => {
-    setFormDate((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleOutsideClick = (e) => {
@@ -25,11 +25,7 @@ const MapFilters = ({ lng, query, setQuery, sidebarOpen, setSidebarOpen }) => {
   useEffect(() => {
     if (formData.area && formData.location) {
       setQuery(
-        `${formData.location && formData.location}, ${
-          formData.area && formData.area
-        }, ${formData.city && formData.city}, ${
-          formData.country && formData.country
-        }`
+        `${formData?.location}, ${formData?.area}, ${formData?.city}, ${formData?.country}`
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
