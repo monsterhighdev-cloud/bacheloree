@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
     "accept-language": "^3.0.20",
     "date-fns": "^4.1.0",
     "i18next": "^23.12.2",
