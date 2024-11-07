@@ -2,6 +2,7 @@ import Footer from "@/app/components/Footer/Footer";
 import Navbar from "@/app/components/Navbar/Navbar";
 import { dir } from "i18next";
 import { Inter } from "next/font/google";
+import Chatbot from "../components/Chatbot/Chatbot";
 import { languages } from "../il8n/settings";
 import "./globals.css";
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children, params: { lng } }) {
         <div className="flex flex-col min-h-dvh">
           <Navbar lng={lng} />
           <main className="flex-grow">{children}</main>
+          <Chatbot />
           <Footer lng={lng} />
         </div>
       </body>

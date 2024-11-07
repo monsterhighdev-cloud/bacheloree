@@ -30,7 +30,7 @@ const MapView = ({ coordinates, listingData }) => {
   const getNearbyPlaces = async ({ lat, lon }) => {
     try {
       const res = await fetch(
-        `https://api.geoapify.com/v2/places?categories=education,commercial.food_and_drink&filter=circle:${lon},${lat},500&bias=proximity:${lon},${lat}&limit=20&apiKey=${process.env.NEXT_PUBLIC_GEO_APIFY_API_KEY}`
+        `https://api.geoapify.com/v2/places?categories=commercial.food_and_drink,public_transport.bus&filter=circle:${lon},${lat},500&bias=proximity:${lon},${lat}&limit=20&apiKey=${process.env.NEXT_PUBLIC_GEO_APIFY_API_KEY}`
       );
       const data = await res.json();
 
